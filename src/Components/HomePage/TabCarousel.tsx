@@ -3,11 +3,11 @@ import { useState } from "react";
 import Image from "next/image";
 
 const tabData = [
-  { title: "Printer Troubleshooting", content: "Jio Health Hub had a goal to increase user engagement and registrations, as well as provide proactive support. With Haptik's help, JIVA was created- a WhatsApp virtual assistant that led to a 21% growth in unique users." },
-  { title: "Windows Issues", content: "Jio Health Hub had a goal to increase user engagement and registrations, as well as provide proactive support. With Haptik's help, JIVA was created- a WhatsApp virtual assistant that led to a 21% growth in unique users." },
-  { title: "Outlook PST File Support", content: "Jio Health Hub had a goal to increase user engagement and registrations, as well as provide proactive support. With Haptik's help, JIVA was created- a WhatsApp virtual assistant that led to a 21% growth in unique users." },
-  { title: "Television Setup", content: "Jio Health Hub had a goal to increase user engagement and registrations, as well as provide proactive support. With Haptik's help, JIVA was created- a WhatsApp virtual assistant that led to a 21% growth in unique users." },
-  { title: "Home Appliances Support", content: "Jio Health Hub had a goal to increase user engagement and registrations, as well as provide proactive support. With Haptik's help, JIVA was created- a WhatsApp virtual assistant that led to a 21% growth in unique users." },
+  { title: "Printer Troubleshooting", content: "Jio Health Hub had a goal to increase user engagement and registrations, as well as provide proactive support. With Haptik's help, JIVA was created- a WhatsApp virtual assistant that led to a 21% growth in unique users.", image:"/image-demo.png" },
+  { title: "Windows Issues", content: "Jio Health Hub had a goal to increase user engagement and registrations, as well as provide proactive support. With Haptik's help, JIVA was created- a WhatsApp virtual assistant that led to a 21% growth in unique users.",image:"/image-demo.png" },
+  { title: "Outlook PST File Support", content: "Jio Health Hub had a goal to increase user engagement and registrations, as well as provide proactive support. With Haptik's help, JIVA was created- a WhatsApp virtual assistant that led to a 21% growth in unique users.",image:"/image-demo.png" },
+  { title: "Television Setup", content: "Jio Health Hub had a goal to increase user engagement and registrations, as well as provide proactive support. With Haptik's help, JIVA was created- a WhatsApp virtual assistant that led to a 21% growth in unique users.",image:"/image-demo.png" },
+  { title: "Home Appliances Support", content: "Jio Health Hub had a goal to increase user engagement and registrations, as well as provide proactive support. With Haptik's help, JIVA was created- a WhatsApp virtual assistant that led to a 21% growth in unique users.",image:"/image-demo.png" },
 ];
 
 const TabbedCarousel = () => {
@@ -78,7 +78,7 @@ const TabbedCarousel = () => {
           <div className="basis-5/12">
           <Image
               className=" ml-auto rounded-r-2xl"
-              src="/image-demo.png "
+               src={tabData[selectedTabIndex].image}
               width={500}
               height={336}
               alt=""
