@@ -16,8 +16,8 @@ const TermsOfService = () => {
         <div className="max-w-screen-xl container px-5 mx-auto md:px-10 lg:px-14">
           <h1 className="mb-3 text-3xl">Terms Of Service</h1>
           <p className="mb-8">
-            Welcome to Bajrang Motors (referred to as "Bajrang Motors," "we,"
-            "us," or "our"). These Terms and Conditions govern your use of our
+            Welcome to Bajrang Motors (referred to as &quot;Bajrang Motors we
+            us, or our).These Terms and Conditions govern your use of our
             website (www.bajrangmotors.com) and services. By accessing or using
             our website and services, you agree to adhere to these Terms and
             Conditions. If you do not agree with any part of these terms, please
@@ -44,7 +44,7 @@ const TermsOfService = () => {
             <li>
               You will not engage in any behavior that could damage, disable,
               overburden, or impair our website or services, or disrupt other
-              users' experience with Bajrang Motors.
+              users experience with Bajrang Motors.
             </li>
             <li>
               You are solely responsible for the content you upload, share, or
@@ -85,7 +85,7 @@ const TermsOfService = () => {
           <h3 className="text-xl mb-3">6. Disclaimer of Warranties</h3>
           <ul className="list-disc ml-4 mb-8">
             <li>
-              Bajrang Motors is provided on an "as is" and "as available" basis,
+              Bajrang Motors is provided on an as is and as available basis,
               without any warranties, express or implied. We do not guarantee
               that our website or services will be uninterrupted, error-free,
               secure, or meet your expectations.
