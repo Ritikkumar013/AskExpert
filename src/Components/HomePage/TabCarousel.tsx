@@ -1,34 +1,29 @@
-// components/TabbedCarousel.tsx
 import { useState } from "react";
 import Image from "next/image";
 
 const tabData = [
-  { title: "Printer Troubleshooting", content: "Jio Health Hub had a goal to increase user engagement and registrations, as well as provide proactive support. With Haptik's help, JIVA was created- a WhatsApp virtual assistant that led to a 21% growth in unique users.", image:"/image-demo.png" },
-  { title: "Windows Issues", content: "Jio Health Hub had a goal to increase user engagement and registrations, as well as provide proactive support. With Haptik's help, JIVA was created- a WhatsApp virtual assistant that led to a 21% growth in unique users.",image:"/image-demo.png" },
-  { title: "Outlook PST File Support", content: "Jio Health Hub had a goal to increase user engagement and registrations, as well as provide proactive support. With Haptik's help, JIVA was created- a WhatsApp virtual assistant that led to a 21% growth in unique users.",image:"/image-demo.png" },
-  { title: "Television Setup", content: "Jio Health Hub had a goal to increase user engagement and registrations, as well as provide proactive support. With Haptik's help, JIVA was created- a WhatsApp virtual assistant that led to a 21% growth in unique users.",image:"/image-demo.png" },
-  { title: "Home Appliances Support", content: "Jio Health Hub had a goal to increase user engagement and registrations, as well as provide proactive support. With Haptik's help, JIVA was created- a WhatsApp virtual assistant that led to a 21% growth in unique users.",image:"/image-demo.png" },
+  { title: "Printer Troubleshooting", content: "Jio Health Hub had a goal to increase user engagement and registrations, as well as provide proactive support. With Haptik's help, JIVA was created- a WhatsApp virtual assistant that led to a 21% growth in unique users.", image: "/image-demo.png" },
+  { title: "Windows Issues", content: "Jio Health Hub had a goal to increase user engagement and registrations, as well as provide proactive support. With Haptik's help, JIVA was created- a WhatsApp virtual assistant that led to a 21% growth in unique users.", image: "/1.jpg" },
+  { title: "Outlook PST File Support", content: "Jio Health Hub had a goal to increase user engagement and registrations, as well as provide proactive support. With Haptik's help, JIVA was created- a WhatsApp virtual assistant that led to a 21% growth in unique users.", image: "/3.jpg" },
+  { title: "Television Setup", content: "Jio Health Hub had a goal to increase user engagement and registrations, as well as provide proactive support. With Haptik's help, JIVA was created- a WhatsApp virtual assistant that led to a 21% growth in unique users.", image: "/image-demo.png" },
+  { title: "Home Appliances Support", content: "Jio Health Hub had a goal to increase user engagement and registrations, as well as provide proactive support. With Haptik's help, JIVA was created- a WhatsApp virtual assistant that led to a 21% growth in unique users.", image: "/image-demo.png" },
 ];
 
 const TabbedCarousel = () => {
-  const [currentIndex, setCurrentIndex] = useState(0); // For tab controls
-  const [selectedTabIndex, setSelectedTabIndex] = useState(0); // For tab content
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [selectedTabIndex, setSelectedTabIndex] = useState(0);
 
-  // Navigate to next or previous tabs
   const goToNext = () => {
-    setCurrentIndex((prevIndex) => Math.min(prevIndex + 1, tabData.length - 4)); // Show max 4 tabs at once
+    setCurrentIndex((prevIndex) => Math.min(prevIndex + 1, tabData.length - 4));
   };
 
   const goToPrev = () => {
     setCurrentIndex((prevIndex) => Math.max(prevIndex - 1, 0));
   };
 
-  // Calculate the tabs to be displayed based on the current index
   const displayedTabs = tabData.slice(currentIndex, currentIndex + 4);
 
-  // Function to handle tab selection
   const handleTabSelect = (index: number) => {
-    // Calculate the correct index based on the current tab position
     const newSelectedIndex = currentIndex + index;
     setSelectedTabIndex(newSelectedIndex);
   };
@@ -36,7 +31,7 @@ const TabbedCarousel = () => {
   return (
     <div className="max-w-screen-xl mx-auto">
       {/* Carousel Controls */}
-      <div className="relative py-4 border-b border-t ">
+      <div className="relative py-4 border-b border-t">
         {/* Previous Button */}
         <button
           onClick={goToPrev}
@@ -47,12 +42,12 @@ const TabbedCarousel = () => {
         </button>
 
         {/* Tabs (Carousel) */}
-        <div className="flex justify-around overflow-hidden space-x-8 px-12">
+        <div className="flex justify-around overflow-hidden space-x-8 px-4 sm:px-12">
           {displayedTabs.map((tab, index) => (
             <div
               key={index}
               className="tab p-4 bg-[#ff000010] text-[#FF0000] font-[500] rounded-md w-full text-center cursor-pointer"
-              onClick={() => handleTabSelect(index)} // Update selected tab on click
+              onClick={() => handleTabSelect(index)}
             >
               {tab.title}
             </div>
@@ -70,25 +65,22 @@ const TabbedCarousel = () => {
       </div>
 
       {/* Tab Content */}
-      <div
-        id="tabContent"
-        className="mt-6 p-4"
-      >
-        <div className="flex gap-12 justify-between items-center ">
-          <div className="basis-5/12">
-          <Image
-              className=" ml-auto rounded-r-2xl"
-               src={tabData[selectedTabIndex].image}
+      <div id="tabContent" className="mt-6 p-4">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-12 justify-between items-center">
+          <div className="flex-shrink-0 md:basis-5/12">
+            <Image
+              className="ml-auto rounded-r-2xl"
+              src={tabData[selectedTabIndex].image}
               width={500}
               height={336}
               alt=""
             />
           </div>
-          <div className="basis-7/12">
-            <h2 className="text-2xl font-semibold mb-4">
-              {tabData[selectedTabIndex].title} 
+          <div className="md:basis-7/12">
+            <h2 className="text-lg sm:text-2xl font-semibold mb-4">
+              {tabData[selectedTabIndex].title}
             </h2>
-            <p>{tabData[selectedTabIndex].content}</p>
+            <p className="text-sm sm:text-base">{tabData[selectedTabIndex].content}</p>
           </div>
         </div>
       </div>

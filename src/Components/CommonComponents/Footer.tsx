@@ -33,11 +33,11 @@ const Footer = () => {
         <div className='text-sm basis-1/3 p-5'>
           <h3 className='text-4xl font-bold mb-4'>LOGO</h3>
           <p className="mb-4">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC</p>
-          <Link href="/cta" className="bg-[#FFD600] text-black px-5 py-3 rounded text-sm inline-block">
+          <Link href="/cta" className="p-3 md:p-3 sm:p-2 bg-[#FFD600] text-black rounded text-sm inline-block">
               Chat Now!
             </Link>
         </div>
-        <div className="basis-1/3">
+        <div className="basis-1/3 pr-5">
           <h4 className='text-lg mb-3'>Join our Newsletter!</h4>
           <form
       onSubmit={handleSubmit}
@@ -61,7 +61,7 @@ const Footer = () => {
       <div className="basis-1/6">
         <button
           type="submit"
-          className="bg-white px-4 py-2 focus:outline-none focus:ring-2 text-black"
+          className="bg-white  lg:p-[6px] md:p-[5px] sm:text-[xl] focus:outline-none focus:ring-2 text-black"
         >
           Submit
         </button>
@@ -102,10 +102,10 @@ const Footer = () => {
 
         </div>
       </div>
-      <div className='flex justify-between max-w-screen-xl mx-auto text-sm px-2 py-3'>
+      <div className='flex justify-between max-w-screen-xl mx-auto text-sm px-2 py-3 sm:text-[10px] md:text-[20px]'>
         <p>Copyright © <span className="text-[#DC143C]">Crobstacle Ventures LLP</span> 2024</p>
-        <div className='underline flex gap-3 text-[#ACACAC] underline-offset-4'>
-          <p>Privacy Policy</p>
+        <div className='underline flex gap-3 text-[#ACACAC] underline-offset-4 lg:text-[20px] md:text-[20px] sm:text-[5px]'>
+          <p className="">Privacy Policy</p>
           <p>Terms of Service</p>
           <p>Contact Us</p>
         </div>

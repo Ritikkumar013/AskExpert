@@ -52,19 +52,19 @@ const Header: React.FC = () => {
               </button>
               {isDropdownOpen && (
                 <div className="absolute top-full left-0 bg-white shadow-md rounded-md w-48 mt-2">
-                  <Link href="/Services/Service1" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#DC143C]">
+                  <Link href="/Services/service1" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#DC143C]">
                   Printer Troubleshooting
                   </Link>
-                  <Link href="/Services/Service2" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#DC143C]">
+                  <Link href="/Services/service2" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#DC143C]">
                   Windows Issues
                   </Link>
-                  <Link href="/Services/Service3" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#DC143C]">
+                  <Link href="/Services/service3" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#DC143C]">
                   Outlook PST File Support
                   </Link>
-                  <Link href="/Services/Service4" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#DC143C]">
+                  <Link href="/Services/service4" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#DC143C]">
                   Television Setup
                   </Link>
-                  <Link href="/Services/Service5" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#DC143C]">
+                  <Link href="/Services/service5" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#DC143C]">
                   Home appliances Support
                   </Link>
                 </div>
